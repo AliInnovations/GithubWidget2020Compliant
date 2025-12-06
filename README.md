@@ -1,6 +1,6 @@
 # Github Widget
 Contributions, stars, followers, trending etc. on Github.
-
+[Github Widget Banner](https://github.com/AliInnovations/GithubWidget2020Compliant/blob/main/Pic/title_image_3.png)
 # Guide
 ### [What is Github Widget?](https://github.com/Nightonke/GithubWidget#what-is-github-widget)
 ### [Download](https://github.com/Nightonke/GithubWidget#download)
@@ -207,4 +207,5 @@ Add all language support.
 #### 1.0.3
 [ V1.0.3](https://github.com/Nightonke/GithubWidget/blob/master/Apk/GithubWidget_1.0.3.apk?raw=true)  
 Delete url and img tags, support larger width.
+
 
