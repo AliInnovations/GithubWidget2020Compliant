@@ -1,5 +1,3 @@
-![GithubWidget](https://github.com/Nightonke/GithubWidget/blob/master/Pic/title_image_3.png?raw=true)
-
 # Github Widget
 Contributions, stars, followers, trending etc. on Github.
 
@@ -209,3 +207,4 @@ Add all language support.
 #### 1.0.3
 [ V1.0.3](https://github.com/Nightonke/GithubWidget/blob/master/Apk/GithubWidget_1.0.3.apk?raw=true)  
 Delete url and img tags, support larger width.
+
