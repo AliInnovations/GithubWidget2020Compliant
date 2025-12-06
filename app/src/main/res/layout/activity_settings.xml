@@ -1,0 +1,884 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.nightonke.githubwidget.SettingsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        >
+
+        <LinearLayout
+            android:id="@+id/user_name_layout"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:background="?android:selectableItemBackground"
+            >
+
+            <EditText
+                android:id="@+id/user_name_title"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:hint="@string/user_name_title"
+                android:gravity="bottom|start"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/settings_title_color"
+                android:textSize="18sp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@null"
+                />
+
+            <TextView
+                android:id="@+id/user_name_content"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="@string/user_name_content"
+                android:gravity="top|start"
+                android:maxLines="2"
+                android:textSize="12sp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginEnd="20dp"
+                />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/divider_color"
+            />
+
+        <RelativeLayout
+            android:id="@+id/motto_layout"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:clickable="true"
+            android:background="?android:selectableItemBackground"
+            >
+
+            <com.nightonke.githubwidget.LimitedEditText
+                android:id="@+id/motto_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:hint="@string/motto_content"
+                android:maxLines="2"
+                android:textColor="@color/settings_title_color"
+                android:textSize="18sp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@null"
+                />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/divider_color"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+
+                <ImageView
+                    android:id="@+id/three_d"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+                <ImageView
+                    android:id="@+id/color"
+                    android:layout_width="@dimen/github_widget_1_avator_size"
+                    android:layout_height="@dimen/github_widget_1_avator_size"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/color_image_background"
+                    android:layout_marginTop="@dimen/github_widget_1_avator_padding_top"
+                    android:layout_marginRight="@dimen/github_widget_1_avator_padding_right"
+                    android:layout_marginEnd="@dimen/github_widget_1_avator_padding_right"
+                    />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/two_d"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp"
+                />
+
+            <TextView
+                android:id="@+id/color_edit_text"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:textCursorDrawable="@null"
+                android:background="@null"
+                android:gravity="center"
+                android:textSize="18sp"
+                />
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                >
+                
+                <TextView
+                    android:id="@+id/seek_bar_min_a"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="0"
+                    android:textSize="18sp"
+                    android:gravity="center_vertical|end"
+                    android:paddingTop="2dp"
+                    />
+                
+                <com.nightonke.githubwidget.MySeekBar
+                    android:id="@+id/seek_bar_a"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:max="255"
+                    android:indeterminate="false" />
+
+                <TextView
+                    android:id="@+id/seek_bar_max_a"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="255"
+                    android:textSize="18sp"
+                    android:gravity="center_vertical|start"
+                    android:paddingTop="2dp"
+                    />
+                
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp"
+                >
+
+                <TextView
+                    android:id="@+id/seek_bar_min_r"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="0"
+                    android:textSize="18sp"
+                    android:gravity="center_vertical|end"
+                    android:paddingTop="2dp"
+                    />
+
+                <com.nightonke.githubwidget.MySeekBar
+                    android:id="@+id/seek_bar_r"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:max="255"
+                    />
+
+                <TextView
+                    android:id="@+id/seek_bar_max_r"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="255"
+                    android:textSize="18sp"
+                    android:gravity="center_vertical|start"
+                    android:paddingTop="2dp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp"
+                >
+
+                <TextView
+                    android:id="@+id/seek_bar_min_g"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="0"
+                    android:textSize="18sp"
+                    android:gravity="center_vertical|end"
+                    android:paddingTop="2dp"
+                    />
+
+                <com.nightonke.githubwidget.MySeekBar
+                    android:id="@+id/seek_bar_g"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:max="255"
+                    />
+
+                <TextView
+                    android:id="@+id/seek_bar_max_g"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="255"
+                    android:textSize="18sp"
+                    android:gravity="center_vertical|start"
+                    android:paddingTop="2dp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp"
+                >
+
+                <TextView
+                    android:id="@+id/seek_bar_min_b"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="0"
+                    android:textSize="18sp"
+                    android:gravity="center_vertical|end"
+                    android:paddingTop="2dp"
+                    />
+
+                <com.nightonke.githubwidget.MySeekBar
+                    android:id="@+id/seek_bar_b"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:max="255"
+                    />
+
+                <TextView
+                    android:id="@+id/seek_bar_max_b"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="255"
+                    android:textSize="18sp"
+                    android:gravity="center_vertical|start"
+                    android:paddingTop="2dp"
+                    />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/reset_base_color"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/reset_base_color"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/divider_color"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <Button
+                android:id="@+id/login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/reset_base_color"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/login_to"
+                android:gravity="center_vertical|start"
+                android:maxLines="2"
+                android:textSize="12sp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="10dp"
+                />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/divider_color"
+            />
+
+        <LinearLayout
+            android:id="@+id/show_toast_layout"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal"
+            android:clickable="true"
+            android:background="?android:selectableItemBackground"
+            >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:id="@+id/show_toast_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/show_toast_title"
+                    android:gravity="bottom|start"
+                    android:maxLines="1"
+                    android:textColor="@color/settings_title_color"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
+                    />
+
+                <TextView
+                    android:id="@+id/show_toast_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/show_toast_content"
+                    android:gravity="top|start"
+                    android:maxLines="2"
+                    android:textSize="12sp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
+                    />
+
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/show_toast_checkbox"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginRight="-30dp"
+                android:layout_marginEnd="-30dp"
+                />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/divider_color"
+            />
+
+        <LinearLayout
+            android:id="@+id/show_month_dash_in_3d_layout"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal"
+            android:clickable="true"
+            android:background="?android:selectableItemBackground"
+            >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:id="@+id/show_month_dash_in_3d_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/show_month_dash_in_3d_title"
+                    android:gravity="bottom|start"
+                    android:maxLines="1"
+                    android:textColor="@color/settings_title_color"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
+                    />
+
+                <TextView
+                    android:id="@+id/show_month_dash_in_3d_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/show_month_dash_in_3d_content"
+                    android:gravity="top|start"
+                    android:maxLines="2"
+                    android:textSize="12sp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
+                    />
+
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/show_month_dash_in_3d_checkbox"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginRight="-30dp"
+                android:layout_marginEnd="-30dp"
+                />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/divider_color"
+            />
+
+        <LinearLayout
+            android:id="@+id/show_weekday_dash_in_3d_layout"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal"
+            android:clickable="true"
+            android:background="?android:selectableItemBackground"
+            >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:id="@+id/show_weekday_dash_in_3d_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/show_weekday_dash_in_3d_title"
+                    android:gravity="bottom|start"
+                    android:maxLines="1"
+                    android:textColor="@color/settings_title_color"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
+                    />
+
+                <TextView
+                    android:id="@+id/show_weekday_dash_in_3d_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/show_weekday_dash_in_3d_content"
+                    android:gravity="top|start"
+                    android:maxLines="2"
+                    android:textSize="12sp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
+                    />
+
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/show_weekday_dash_in_3d_checkbox"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginRight="-30dp"
+                android:layout_marginEnd="-30dp"
+                />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/divider_color"
+            />
+
+        <LinearLayout
+            android:id="@+id/start_from_layout"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:background="?android:selectableItemBackground"
+            >
+
+            <RadioButton
+                android:id="@+id/start_from_sunday"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="@string/start_from_sunday"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:checked="false" />
+
+            <RadioButton
+                android:id="@+id/start_from_monday"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="@string/start_from_monday"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="5dp"
+                />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/divider_color"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="0.5h"
+                    android:textSize="18sp"
+                    android:gravity="center_vertical|end"
+                    android:paddingTop="2dp"
+                    />
+
+                <com.nightonke.githubwidget.MySeekBar
+                    android:id="@+id/seek_bar_update_time"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:max="48"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="∞"
+                    android:textSize="18sp"
+                    android:gravity="center_vertical|start"
+                    android:paddingTop="2dp"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/update_time_text"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:gravity="top|start"
+                android:maxLines="2"
+                android:textSize="12sp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
+                />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/divider_color"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="1"
+                    android:textSize="18sp"
+                    android:gravity="center_vertical|end"
+                    android:paddingTop="2dp"
+                    />
+
+                <com.nightonke.githubwidget.MySeekBar
+                    android:id="@+id/seek_bar_received_event_per_page"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:max="99"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="100"
+                    android:textSize="18sp"
+                    android:gravity="center_vertical|start"
+                    android:paddingTop="2dp"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/received_event_per_page_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top|start"
+                android:textSize="12sp"
+                android:text="12 events per page."
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="10dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top|start"
+                android:textSize="12sp"
+                android:text="@string/received_event_per_page"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="10dp"
+                />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/divider_color"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/contents_in_list"
+            android:gravity="bottom|start"
+            android:maxLines="1"
+            android:textColor="@color/settings_title_color"
+            android:textSize="18sp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            />
+
+        <RadioGroup
+            android:id="@+id/list_view_content_radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            >
+
+            <RadioButton
+                android:id="@+id/trending_daily_radio_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/trending_daily"
+                />
+
+            <RadioButton
+                android:id="@+id/trending_weekly_radio_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/trending_weekly"
+                />
+
+            <RadioButton
+                android:id="@+id/trending_monthly_radio_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/trending_monthly"
+                />
+
+            <RadioButton
+                android:id="@+id/received_event_radio_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/received_event"
+                />
+
+        </RadioGroup>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/divider_color"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <Button
+                android:id="@+id/language"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/set_language"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/divider_color"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/about"
+            android:gravity="bottom|start"
+            android:maxLines="1"
+            android:textColor="@color/settings_title_color"
+            android:textSize="18sp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="@string/about_content"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/divider_color"
+            />
+
+        <Button
+            android:id="@+id/view_source_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/view_source"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            />
+
+        <Button
+            android:id="@+id/follow_nightonke"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/follow_me"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="15dp"
+            />
+
+    </LinearLayout>
+
+</ScrollView>
